@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Template Stylesheet -->
+      <link rel="stylesheet" href="asset/estilos.css">
+
+    
+
+
+</head>
+<body>
+        <form id="miFormulario" class="d-flex flex-column">
+          <div class="row">
+              <div class="d-flex flex-wrap cajaFormulario">
+                  <!-- Nombre -->
+                  <div class="col-lg-6 mb-3 campos">
+                      <label for="nombre" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" required>
+                  </div>
+                  <!-- Apellido -->
+                  <div class="col-lg-6 mb-3 campos">
+                      <label for="apellido" class="form-label">Apellido</label>
+                      <input type="text" class="form-control" id="apellido" required>
+                  </div>
+                  <!-- CC o NIT -->
+                  <div class="col-lg-6 mb-3 campos">
+                      <label for="cc_nit" class="form-label">CC o NIT</label>
+                      <input type="number" class="form-control" id="cc_nit" required>
+                  </div>
+                  <!-- Correo electrónico -->
+                  <div class="col-lg-6 mb-3 campos">
+                      <label for="correo" class="form-label">Correo electrónico</label>
+                      <input type="email" class="form-control" id="correo" required>
+                  </div>
+                  <!-- Celular -->
+                  <div class="col-lg-6 mb-3 campos">
+                    <label for="celular" class="form-label">Celular</label>
+                    <input type="number" class="form-control" id="celular" required>
+                  </div>
+                  
+                  <!-- Ciudad -->
+                  <div class="col-lg-6 mb-3 campos">
+                      <label for="ciudad" class="form-label">Evento al que vas a asistir</label>
+                      <select class="form-select" id="ciudad" name="ciudad" required>
+                          <option value="">Selecciona una ciudad</option>
+                          <option value="Bogotá">Bogotá</option>
+                          <option value="Buga">Buga</option>
+                          <option value="Cúcuta">Cúcuta</option>
+                      </select>
+                  </div>
+                  <!-- Eres invitado de... -->
+                  <div class="col-lg-6 mb-3 campos">
+                      <label for="cliente" class="form-label">Eres invitado de...</label>
+                      <select class="form-select" id="cliente" required>
+                          <option value="">Selecciona una opción</option>
+                          <option value="Alejandro Velasquez">Alejandro Velasquez</option>
+                          <option value="Belia Díaz">Belia Díaz</option>
+                          <option value="David Villa">David Villa</option>
+                          <option value="Fernando Álvarez">Fernando Álvarez</option>
+                          <option value="Fernando Contreras">Fernando Contreras</option>
+                          <option value="Julián Lopéz">Julián Lopéz</option>
+                          <option value="Juliana Vallejo">Juliana Vallejo</option>
+                          <option value="Laura Cruz">Laura Cruz</option>
+                          <option value="María José Ruales">María José Ruales</option>
+                          <option value="Miguel Angel Tinoco">Miguel Angel Tinoco</option>
+                          <option value="Nubia Lucía Bólivar">Nubia Lucía Bólivar</option>
+                          <option value="Oscar Javier Ríos">Oscar Javier Ríos</option>
+                          <option value="Rubén Darío Londoño">Rubén Darío Londoño</option>
+                          <option value="Sofía Serrano">Sofía Serrano</option>
+                          <option value="Sonia Sánchez">Sonia Sánchez</option>
+                          <option value="Valentina Osorio">Valentina Osorio</option>
+                          <option value="Victor Rodríguez">Victor Rodríguez</option>
+                          <option value="Wilson Gómez">Wilson Gómez</option>
+                      </select>
+                  </div>
+              </div>
+          </div>
+          <!-- Checkbox -->
+          <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="agreeCheckbox">
+              <label class="form-check-label" for="agreeCheckbox" id="popupTrigger">Autorizo el tratamiento de mis datos personales y envío de marketing.</label>
+          </div>
+          <!-- Botón de enviar -->
+          <div class="text-center mt-3">
+              <button type="submit" class="btn btn-primary btn-finca" id="enviarBtn" disabled>Enviar</button>
+          </div>
+      </form>
+
+
+  <!-- Modal -->
+  <div class="modal" id="spinnerModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Spinner -->
+        <div class="modal-body text-center">
+          <i class="fas fa-spinner fa-spin fa-3x"></i>
+          <p>Un momento por favor...</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <div class="popup" id="popup">
+    <div class="popup-inner">
+      <button type="button" class="btn-close" id="closePopupButton"></button>
+      <p>
+        Autorizo a CONTEGRAL S.A.S identificada con NIT 890901271 ubicada en la CR 48 27 A SUR 89 - Envigado en calidad de RESPONSABLE para recolectar, tratar, usar, ceder, transferir o transmitir a terceros o encargados en Colombia o en el exterior los datos personales obtenidos a través de la presente autorización. He leído la Política de Tratamiento de Datos Personales disponible en el sitio web <a href="https://www.grupobios.co/sostenibilidad/gobierno-corporativo">https://www.grupobios.co/sostenibilidad/gobierno-corporativo</a> por ello, consiento y autorizo de manera previa, expresa e inequívoca que mis datos personales sean tratados para el cumplimiento de las siguientes finalidades:
+      </p>
+      <ol>
+        <li>Ser contactado para la gestión de mercadeo, promoción y venta de productos</li>
+        <li>Incluirme en las jornadas de capacitación y formación que realice la Compañía</li>
+        <li>Mantenerme informado sobre los eventos que se llegaren a realizar</li>
+        <li>Recibir el portafolio de productos y servicios ofrecidos por la Compañía</li>
+        <li>Todas las demás estipulados en la política para el tratamiento de datos personales de la compañía</li>
+      </ol>
+      <p>
+        Como titular tengo los siguientes derechos:
+      </p>
+      <ol>
+        <li>Acceder en forma gratuita a los datos proporcionados que hayan sido objeto de tratamiento.</li>
+        <li>Solicitar la actualización y rectificación de su información frente a datos parciales, inexactos, incompletos, fraccionados, que induzcan a error, o a aquellos cuyo tratamiento esté prohibido o no haya sido autorizado.</li>
+        <li>Solicitar prueba de la autorización otorgada.</li>
+        <li>Presentar ante la Superintendencia de Industria y Comercio (SIC) o autoridad competente quejas por infracciones a lo dispuesto en la normatividad vigente.</li>
+        <li>Revocar la autorización y/o solicitar la supresión del dato, a menos que exista un deber legal o contractual que haga imperativo conservar la información.</li>
+        <li>Abstenerme de responder las preguntas sobre datos sensibles o sobre datos de las niñas y niños y adolescentes.</li>
+      </ol>
+      <p>
+        Podré ejercer los derechos de consulta, supresión y revocación dirigiendo mi solicitud al correo electrónico datospersonales@grupobios.co
+      </p>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+<!-- Bootstrap JS (opcional, si necesitas funcionalidades JS de Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+<script src="asset/formulario.js"></script>
+</body>
+</html>
